@@ -36,10 +36,10 @@ class AdvertisementSerializer(serializers.ModelSerializer):
         # само поле при этом объявляется как `read_only=True`
         validated_data["creator"] = self.context["request"].user
         return super().create(validated_data)
-    #
-    # def validate(self, data):
-    #     """Метод для валидации. Вызывается при создании и обновлении."""
-    #
-    #     # TODO: добавьте требуемую валидацию
-    #
-    #     return data
+
+    def validate(self, data):
+        user = self.context['request'].user
+        if not self.instance:
+            if Advertisement.objects.filter(creator=user, status='OPEN').count() > 9:
+                raise serializers.ValidationError(f'Open must be no more than 10 ads')
+        return data

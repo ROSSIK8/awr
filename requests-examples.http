@@ -3,7 +3,7 @@
 @baseUrl = http://localhost:8000/api
 
 # получение объявлений
-GET {{baseUrl}}/advertisements/
+GET {{baseUrl}}/advertisements
 Content-Type: application/json
 
 ###
@@ -11,21 +11,21 @@ Content-Type: application/json
 # создание объявления
 POST {{baseUrl}}/advertisements/
 Content-Type: application/json
-# Authorization: Token 963690d61dfa37c849574dc1093582f18b868b3f
-Authorization: Token cce15a5152b00b4dbcee96f5b1a228b88f2fff39
+Authorization: Token 963690d61dfa37c849574dc1093582f18b868b3f
+# Authorization: Token cce15a5152b00b4dbcee96f5b1a228b88f2fff39
 
 {
-  "title": "1",
-  "description": "2"
+  "title": "1345",
+  "description": "2345"
 }
 
 ###
 
 # попытка поменять объявление
-PATCH {{baseUrl}}/advertisements/6/
+PATCH {{baseUrl}}/advertisements/74/
 Content-Type: application/json
-# Authorization: Token 963690d61dfa37c849574dc1093582f18b868b3f
-Authorization: Token cce15a5152b00b4dbcee96f5b1a228b88f2fff39
+Authorization: Token 963690d61dfa37c849574dc1093582f18b868b3f
+# Authorization: Token cce15a5152b00b4dbcee96f5b1a228b88f2fff39
 
 {
   "status": "CLOSED"
@@ -52,5 +52,7 @@ Content-Type: application/json
 ###
 
 # Удаление
-DELETE  {{baseUrl}}/advertisements/4/
+DELETE  {{baseUrl}}/advertisements/32/
 Content-Type: application/json
+# Authorization: Token 963690d61dfa37c849574dc1093582f18b868b3f
+Authorization: Token cce15a5152b00b4dbcee96f5b1a228b88f2fff39
