@@ -16,6 +16,7 @@ class AdvertisementViewSet(ModelViewSet):
     filter_backends = [DjangoFilterBackend]
     filterset_class = AdvertisementFilter
     permission_classes = [IsAuthenticatedOrReadOnly, IsOwner]
+
     def perform_create(self, serializer):
         serializer.save(creator=self.request.user)
 
