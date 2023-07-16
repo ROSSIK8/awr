@@ -36,7 +36,7 @@ jobs:
               uses: actions/checkout@v3
 
             - name: Установка python
-              uses: actions/setup-python
+              username: actions/setup-python
               with:
                  python-version: 3.11
 
