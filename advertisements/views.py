@@ -23,4 +23,4 @@ class AdvertisementViewSet(ModelViewSet):
 
 @api_view(['GET'])
 def sample_view(requests):
-    return Response('How are you?')
+    return Response('How are you???')
