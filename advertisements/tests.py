@@ -9,7 +9,6 @@ class SampleTestCase(TestCase):
         response = client.get(url)
         self.assertEqual(response.status_code, 200)
 
-
     def test_bad_request(self):
         url = '/api/test_1/'
         client = APIClient()
